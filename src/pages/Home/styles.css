@@ -1,102 +1,42 @@
 .container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
     height: 100vh;
-    margin: 0 auto;
-}
-
-.containerText {
-    padding-left: 4rem;
-}
-
-.title {
-    font-size: 2rem;
-    color: aliceblue;
-}
-
-.title > span {
-    font-size: 2.5rem;
-    color: #222;
-}
-
-.titleName {
-    display: flex;
-    font-size: 2rem;
-    color: aliceblue;
-}
-
-.titleWith {
-    margin-top: 10px;
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-.titleAbility {
-    color: #222;
-    font-weight: bold;
-    display: flex;
-}
-
-.containerImage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 40%;
-}
-
-.containerImage > img {
-    height: 90%;
-    width: 90%;
-    border: 4px solid #222;
-    border-radius: 100%;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
-}
-
-.titleProject {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.titleProject > h1 {
-    font-size: 40px;
-    color: aliceblue;
-}
-
-.titleProject > span {
-    color: aliceblue;
-    font-size: 12px;
-}
-
-.corousel {
-    width: 100%;
-    max-width: 800px;
-    min-height: 100vh;
-    margin-left: 24%;
+    background-color: #000;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carrosel {
-    cursor: grab;
-    overflow: hidden;
+.container h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 72px;
+    font-weight: 900;
+    max-width: 1200px;
+    text-align: center;
+    line-height: 120%;
+    letter-spacing: -0.75px;
+
+    position: relative;
+    z-index: 10;
 }
 
-.inner {
-    display: flex;
+.nameText {
+    position: relative;
 }
 
-.item {
-    min-height: 200px;
-    min-width: 400px;
-    padding: 14px;
+.nameText svg {
+    position: absolute;
+    left: 20%;
+    bottom: -3%;
 }
 
-.item img {
-    width: 100%;
-    height: 90%;
-    border-radius: 20px;
-    pointer-events: none;
+.colorText {
+    color: slateblue;
+}
+
+#hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }

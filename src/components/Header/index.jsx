@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import './styles.css'
 
 function Header() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className='header'>
-        <div>
-            <ul className='list'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Project</li>
-                <li>Contact</li>
-            </ul>
+    <div className='header'>
+      <span className='headerLogo'><a href="/">YK</a></span>
+        <div className={`headerItems ${isOpen && 'open'}`}>
+            <a href="/about">About</a>
+            <a href="/experience">Experience</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
         </div>
-    </header>
+        <div className={`headerToggle ${isOpen && 'open'}`} onClick={() => setIsOpen(!isOpen)}>
+          <div className='bar'></div>
+        </div>
+    </div>
   )
 }
 
