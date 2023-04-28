@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 function HeroPattern() {
   return (
-    <svg id="hero" width="1217" height="479" viewBox="0 0 1217 479" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="hero" width="100%" height="100%" viewBox="0 0 1217 479" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M632 168L632 122C632 113.163 639.163 106 648 106L661 106" stroke="url(#pulse-1)" strokeWidth="0.5" strokeDasharray="8 8"/>
       <path d="M690 5.72205e-06L690 90C690 98.8366 682.837 106 674 106L661 106" stroke="url(#pulse-1)" strokeWidth="0.5" strokeDasharray="8 8"/>
       <line x1="584.75" y1="-3.27835e-08" x2="584.75" y2="166" stroke="url(#pulse-1)" strokeWidth="0.5" strokeDasharray="8 8"/>
