@@ -1,18 +1,17 @@
 import React from 'react';
 import TypeIt from "typeit-react";
-import HeroPattern from '../../assets/HeroPattern'
-import Underline from '../../assets/Underline';
+import HeroPattern from '../../assets/HeroPattern';
 
-import './styles.css';
+import { Container, Text } from './styles';
 
 
 function Home() {
 
   return (
-    <div className='container'>
-        <h1>
-        Hi, My name is <span className='nameText'>Yudi.<Underline /></span> <br/>
-        <span className='colorText'>I'm a Front-End Developer.</span> <br/>
+    <Container className='container'>
+        <Text>
+        Hi, My name is <span>Yudi.</span> <br/>
+        <span>I'm a Front-End Developer.</span> <br/>
         My experience with {' '}
         <TypeIt
             options={{ loop: true }}
@@ -22,9 +21,9 @@ function Home() {
             .pause(750).delete().pause(750).type("TypeScript.").pause(750);
             return instance;
         }}/>
-        </h1>
+        </Text>
         <HeroPattern />
-    </div>
+    </Container>
   )
 }
 

@@ -1,13 +1,22 @@
-.container {
+import styled from "styled-components";
+
+export const Container = styled.div`
     height: 100vh;
     background-color: #000;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.container h1 {
+    #hero {
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+`;
+
+export const Text = styled.h1`
     font-family: "Inter", sans-serif;
     font-size: 72px;
     font-weight: 900;
@@ -18,25 +27,9 @@
 
     position: relative;
     z-index: 10;
-}
 
-.nameText {
-    position: relative;
-}
-
-.nameText svg {
-    position: absolute;
-    left: 40%;
-    bottom: -3%;
-}
-
-.colorText {
-    color: slateblue;
-}
-
-#hero {
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translateX(-50%) translateY(-50%);
-}
+    span {
+        position: relative;
+        color: slateblue;
+    }
+`;

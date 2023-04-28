@@ -2,18 +2,18 @@ import React from 'react';
 import HeroPattern from '../../assets/HeroPattern';
 import Underline from '../../assets/Underline';
 
-import './styles.css';
+import { Container, Text } from './styles';
 
 
 function Contact() {
 
   return (
-    <div className='container'>
-        <h1>
-          <span className='nameText'>Contact.<Underline /></span>
-        </h1>
+    <Container>
+        <Text>
+          <span>Contact.<Underline /></span>
+        </Text>
         <HeroPattern />
-    </div>
+    </Container>
   )
 }
 
