@@ -2,13 +2,12 @@ import React from 'react';
 import TypeIt from "typeit-react";
 import HeroPattern from '../../assets/HeroPattern';
 
+import { lightTheme, darkTheme} from '../../theme'
 import { Container, Text } from './styles';
 
-
-function Home() {
-
+function Home({ theme }) {
   return (
-    <Container className='container'>
+    <Container theme={theme === 'Light Mode' ? lightTheme : darkTheme}>
         <Text>
         Hi, My name is <span>Yudi.</span> <br/>
         <span>I'm a Front-End Developer.</span> <br/>

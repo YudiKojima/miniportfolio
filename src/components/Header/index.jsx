@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 
 import './styles.css'
+import VisualMode from '../VisualMode';
 
-function Header() {
+function Header({ theme, onClick }) {
 
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className='header'>
       <span className='headerLogo'><a href="/">YK</a></span>
+      <VisualMode theme={theme} onClick={onClick}/>
         <div className={`headerItems ${isOpen && 'open'}`}>
             <a href="/about">About</a>
             <a href="/experience">Experience</a>

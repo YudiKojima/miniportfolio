@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     height: 100vh;
-    background-color: #000;
-    color: #fff;
+    color: ${(props) => props.theme.fontColor};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +29,6 @@ export const Text = styled.h1`
 
     span {
         position: relative;
-        color: slateblue;
+        color: #ff704f;
     }
 `;

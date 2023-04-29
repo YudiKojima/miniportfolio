@@ -1,25 +1,31 @@
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Home from "./pages/Home";
-import Header from "./components/Header";
+import { useState } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 import About from "./pages/About";
-import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-
-import "./App.css";
+import Experience from "./pages/Experience";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 function App() {
+
+    const [theme, setTheme] = useState('Dark Mode')
+    
+    const themeToggler = () => {
+          theme === 'Light Mode' ? setTheme('Dark Mode') : setTheme('Light Mode');
+    } 
+
     return (
         <Router>
-            <Header />
-                <div className="App">
+            <Header theme={theme} onClick={() => themeToggler()}/>
+                <div>
                     <Routes>
-                    <Route path="/" element={<Home />}/>
-                    <Route path="/about" element={<About />}/>
-                    <Route path="/experience" element={<Experience />}/>
-                    <Route path="/projects" element={<Projects />}/>
-                    <Route path="/contact" element={<Contact />}/>
+                    <Route path="/" element={<Home theme={theme}/>}/>
+                    <Route path="/about" element={<About theme={theme}/>}/>
+                    <Route path="/experience" element={<Experience theme={theme}/>}/>
+                    <Route path="/projects" element={<Projects theme={theme}/>}/>
+                    <Route path="/contact" element={<Contact theme={theme}/>}/>
                     </Routes>
                 </div>
             <Footer />
