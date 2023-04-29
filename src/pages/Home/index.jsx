@@ -4,10 +4,12 @@ import HeroPattern from '../../assets/HeroPattern';
 
 import { lightTheme, darkTheme} from '../../theme'
 import { Container, Text } from './styles';
+import Fade from 'react-reveal/Fade';
 
 function Home({ theme }) {
   return (
     <Container theme={theme === 'Light Mode' ? lightTheme : darkTheme}>
+      <Fade bottom>
         <Text>
         Hi, My name is <span>Yudi.</span> <br/>
         <span>I'm a Front-End Developer.</span> <br/>
@@ -21,6 +23,7 @@ function Home({ theme }) {
             return instance;
         }}/>
         </Text>
+        </Fade>
         <HeroPattern />
     </Container>
   )

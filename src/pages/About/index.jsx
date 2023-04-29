@@ -4,14 +4,17 @@ import Underline from '../../assets/Underline';
 
 import { lightTheme, darkTheme} from '../../theme'
 import { Container, Text } from './styles';
+import Fade from 'react-reveal/Fade';
 
 function About({ theme }) {
 
   return (
     <Container theme={theme === 'Light Mode' ? lightTheme : darkTheme}>
+      <Fade bottom>
         <Text>
           <span>About.<Underline /></span>
         </Text>
+        </Fade>
         <HeroPattern />
     </Container>
   )
